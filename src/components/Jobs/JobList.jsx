@@ -43,8 +43,8 @@ export default function JobList({ jobs, components, ships, onEdit, onDelete, onS
 
       <div className="grid gap-4 ">
         {filteredJobs.map((job) => (
-          <div key={job.id} className="bg-white rounded-lg shadow p-4">
-            <h2 className="font-bold text-lg mb-2">{job.type} - {getComponentName(job.componentId)}</h2>
+          <div key={job.id} className="bg-amber-200 rounded-lg shadow p-4">
+            <h2 className="font-bold text-lg text-blue-700 mb-2">{job.type} - {getComponentName(job.componentId)}</h2>
             <p><strong>Ship:</strong> {getShipName(job.shipId)}</p>
             <p><strong>Priority:</strong> {job.priority}</p>
             <p><strong>Status:</strong> {job.status}</p>

@@ -12,7 +12,7 @@ export default function ComponentList({ components, shipId, onEdit, onDelete }) 
       {filteredComponents.map((component) => (
         <div
           key={component.id}
-          className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition-shadow"
+          className="bg-amber-200 shadow-md rounded-xl p-5 hover:shadow-xl  transition-shadow"
         >
           <h2 className="text-xl font-semibold text-indigo-700 mb-2">{component.name}</h2>
           <p className="text-gray-600 mb-1">

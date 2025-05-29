@@ -8,7 +8,7 @@ export default function ShipList({ ships, onEdit, onDelete }) {
       {ships.map((ship) => (
         <div
           key={ship.id}
-          className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition-shadow"
+          className="bg-amber-200 shadow-md rounded-xl p-5 hover:shadow-xl transition-shadow"
         >
           <h2 className="text-xl font-semibold text-blue-700 mb-2">{ship.name}</h2>
           <p className="text-gray-600 mb-4">IMO Number: {ship.imo}</p>

@@ -11,9 +11,6 @@ export default function DashboardPage() {
           <h1 className="text-3xl font-bold text-white tracking-tight">
             Dashboard Overview
           </h1>
-          <p className="text-white mt-1">
-            Monitor ship health, component status, and maintenance activities.
-          </p>
         </div>
 
         {/* KPI Cards */}
