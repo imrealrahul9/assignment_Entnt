@@ -16,8 +16,8 @@ export default function Navbar() {
   return (
     <nav className="bg-white text-black shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link to="/dashboard" className="text-xl font-bold hover:underline">
+        <div className="flex items-center gap-4 text-blue-600">
+          <Link to="/dashboard" className="text-xl font-bold hover:bg-blue-200">
             ShipManager
           </Link>
           <button

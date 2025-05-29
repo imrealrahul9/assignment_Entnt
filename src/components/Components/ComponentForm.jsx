@@ -1,14 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function ComponentForm({ component = {}, ships = [], onSubmit, onCancel }) {
+export default function ComponentForm({ component, ships = [], onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
-    id: component.id || null,
-    name: component.name || "",
-    serialNumber: component.serialNumber || "",
-    installDate: component.installDate || "",
-    lastMaintenanceDate: component.lastMaintenanceDate || "",
-    shipId: component.shipId || (ships[0]?.id || ""),
+    id: null,
+    name: "",
+    serialNumber: "",
+    installDate: "",
+    lastMaintenanceDate: "",
+    shipId: ships[0]?.id || "",
   });
+
+  useEffect(() => {
+    if (component) {
+      setFormData({
+        id: component.id || null,
+        name: component.name || "",
+        serialNumber: component.serialNumber || "",
+        installDate: component.installDate || "",
+        lastMaintenanceDate: component.lastMaintenanceDate || "",
+        shipId: component.shipId || ships[0]?.id || "",
+      });
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        shipId: ships[0]?.id || "",
+      }));
+    }
+  }, [component, ships]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +41,7 @@ export default function ComponentForm({ component = {}, ships = [], onSubmit, on
   return (
     <form onSubmit={handleSubmit} className="mb-6 bg-white p-4 rounded shadow">
       <h2 className="text-xl font-semibold mb-4">
-        {component.id ? "Edit Component" : "Add Component"}
+        {formData.id ? "Edit Component" : "Add Component"}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
@@ -85,7 +103,7 @@ export default function ComponentForm({ component = {}, ships = [], onSubmit, on
           type="submit"
           className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
         >
-          {component.id ? "Update" : "Create"}
+          {formData.id ? "Update" : "Create"}
         </button>
       </div>
     </form>
