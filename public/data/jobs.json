@@ -1,0 +1,4 @@
+[
+    { "id": "j1", "componentId": "c1", "shipId": "s1", "type": "Inspection", "priority": "High",
+    "status": "Open", "assignedEngineerId": "3", "scheduledDate": "2025-05-05" }
+]

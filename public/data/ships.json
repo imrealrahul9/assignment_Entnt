@@ -1,0 +1,5 @@
+[
+    { "id": "s1", "name": "Ever Given", "imo": "9811000", "flag": "Panama", "status": "Active" },
+    { "id": "s2", "name": "Maersk Alabama", "imo": "9164263", "flag": "USA", "status": "Under Maintenance" }
+  ]
+  

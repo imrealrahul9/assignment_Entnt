@@ -1,0 +1,6 @@
+[
+{ "id": "c1", "shipId": "s1", "name": "Main Engine", "serialNumber": "ME-1234",
+"installDate": "2020-01-10", "lastMaintenanceDate": "2024-03-12" },
+{ "id": "c2", "shipId": "s2", "name": "Radar", "serialNumber": "RAD-5678", "installDate":
+"2021-07-18", "lastMaintenanceDate": "2023-12-01" }
+]
