@@ -9,4 +9,14 @@ Currently, two official plugins are available:
 
 ## Expanding the ESLint configuration
 
+users are hardcoded as mentioned so:-
+
+"users": [
+{ "id": "1", "role": "Admin", "email": "admin@entnt.in", "password": "admin123" },
+{ "id": "2", "role": "Inspector", "email": "inspector@entnt.in", "password": "inspect123" },
+{ "id": "3", "role": "Engineer", "email": "engineer@entnt.in", "password": "engine123" }
+]
+
+
+
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
